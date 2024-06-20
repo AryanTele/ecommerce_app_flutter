@@ -39,7 +39,7 @@ class _ShopPageState extends State<ShopPage> {
 
         //mess🔥age
         const Padding(
-          padding: const EdgeInsets.symmetric(vertical: 25.0),
+          padding: EdgeInsets.symmetric(vertical: 25.0),
           child: Text(
             "everyone flies... some fly longer than others",
             style: TextStyle(
@@ -88,6 +88,12 @@ class _ShopPageState extends State<ShopPage> {
               );
               return ShoeTile(shoe: shoe);
             },
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 35, left: 25, right: 25),
+          child: Divider(
+            color: Colors.transparent,
           ),
         )
       ],
