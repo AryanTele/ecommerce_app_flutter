@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 class ShoeTile extends StatelessWidget {
   Shoe shoe;
+  void Function()? onTap;
   ShoeTile({
     super.key,
     required this.shoe,
+    required this.onTap,
   });
 
   @override
@@ -30,10 +32,14 @@ class ShoeTile extends StatelessWidget {
           ),
 
           // desc
-          Text(
-            shoe.description,
-            style: TextStyle(
-              color: Colors.grey[600],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(
+              shoe.description,
+              style: TextStyle(
+                color: Colors.grey[600],
+              ),
+              textAlign: TextAlign.center,
             ),
           ),
 
@@ -64,7 +70,9 @@ class ShoeTile extends StatelessWidget {
                     )
                   ],
                 ),
-                Container(
+                GestureDetector(
+                  onTap: onTap,
+                  child: Container(
                     padding: const EdgeInsets.all(20),
                     decoration: const BoxDecoration(
                       color: Colors.black,
@@ -76,7 +84,9 @@ class ShoeTile extends StatelessWidget {
                     child: const Icon(
                       Icons.add,
                       color: Colors.white,
-                    )),
+                    ),
+                  ),
+                ),
               ],
             ),
           )

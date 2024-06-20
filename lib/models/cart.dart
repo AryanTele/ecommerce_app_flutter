@@ -1,15 +1,14 @@
 import 'package:ecommerce_app/models/shoe.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class Cart extends ChangeNotifier {
   //list of shoes for sale
   List<Shoe> shoeShop = [
     Shoe(
-      name: 'Zoom Freak',
-      price: '239',
-      description: 'The best when in comes to class and comfort',
-      imgPath: 'lib/images/image-2.png',
+      name: 'Air Force 1',
+      price: '196',
+      description: 'When in doubt always go with classics',
+      imgPath: 'lib/images/image-1.png',
     ),
     Shoe(
       name: 'Air Force 1',
